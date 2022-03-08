@@ -109,6 +109,7 @@ jacocoTestReport {
 }
 
 project.tasks['sonarqube'].dependsOn test, integration, jacocoTestReport
+project.tasks['check'].dependsOn integration
 
 sonarqube {
   properties {
@@ -134,13 +135,23 @@ dependencyUpdates {
 dependencyCheck {
   // Specifies if the build should be failed if a CVSS score above a specified level is identified.
   // range of 0-10 fails the build, anything greater and it doesn't fail the build
-  failBuildOnCVSS = System.getProperty('dependencyCheck.failBuild') == 'true' ? 0 : 11
+  failBuildOnCVSS = 0
   suppressionFile = 'config/owasp/suppressions.xml'
 
   analyzers {
     // Disable scanning of .NET related binaries
     assemblyEnabled = false
   }
+    skipConfigurations = [
+    "checkstyle",
+    "compileOnly",
+    "pmd",
+    "integrationTest",
+    "functionalTest",
+    "smokeTest",
+    "contractTestRuntimeClasspath",
+    "contractTestCompileClasspath"
+  ]
 }
 
 dependencyManagement {
@@ -171,7 +182,7 @@ dependencies {
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json'
   implementation group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
-  implementation group: 'com.github.hmcts.java-logging', name: 'logging', version: reformLoggingVersion
+  implementation group: 'com.github.hmcts.java-logging', name: 'logging', version: '6.0.1'
   implementation group: 'com.github.hmcts.java-logging', name: 'logging-appinsights', version: reformLoggingVersion
   implementation group: 'com.github.hmcts', name: 'properties-volume-spring-boot-starter', version: '0.1.1'
   implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: log4JVersion
