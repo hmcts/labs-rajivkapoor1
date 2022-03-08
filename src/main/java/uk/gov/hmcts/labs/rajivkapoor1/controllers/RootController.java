@@ -23,7 +23,7 @@ public class RootController {
             @ApiResponse(responseCode = "200", description = "A welcome message"),
             @ApiResponse(responseCode = "404", description = "No welcome could be found")
 
-    @RequestMapping("/", method = GET, produces = TEXT_PLAIN_VALUE))
+    @RequestMapping("/", method = GET, produces = TEXT_PLAIN_VALUE)
     public ResponseEntity<String> welcome() {
         return ok("Welcome to labs-rajivkapoor1 application");
     }
