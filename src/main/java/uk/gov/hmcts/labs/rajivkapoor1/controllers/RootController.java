@@ -7,7 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
 import static org.springframework.http.ResponseEntity.ok;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 /**
  * Default endpoints per application.
@@ -22,8 +24,8 @@ public class RootController {
         @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "A welcome message"),
             @ApiResponse(responseCode = "404", description = "No welcome could be found")
-
-    @RequestMapping("/", method = GET, produces = TEXT_PLAIN_VALUE)
+        })
+    @RequestMapping(value = "/", method = GET, produces = TEXT_PLAIN_VALUE)
     public ResponseEntity<String> welcome() {
         return ok("Welcome to labs-rajivkapoor1 application");
     }
