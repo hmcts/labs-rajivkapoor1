@@ -24,7 +24,7 @@ public class TestController {
         @ApiResponse(responseCode = "200", description = "A test message"),
         @ApiResponse(responseCode = "404", description = "No welcome could be found")
     })
-    @GetMapping(value = "/testing", method = GET, produces = TEXT_PLAIN_VALUE)
+    @RequestMapping(value = "/testing", method = GET, produces = TEXT_PLAIN_VALUE)
     public ResponseEntity<String> welcome() {
         return ok("Hello and welcome to the test");
     }
