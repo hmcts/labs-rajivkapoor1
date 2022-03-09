@@ -28,6 +28,4 @@ public class TestController {
     public ResponseEntity<String> welcome() {
         return ok("Hello and welcome to the test");
     }
-}class TestController {
-    
 }
