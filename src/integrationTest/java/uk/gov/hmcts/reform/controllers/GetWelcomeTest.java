@@ -1,4 +1,4 @@
-package uk.gov.hmcts.labs.rajivkapoor1.controllers;
+package uk.gov.hmcts.reform.controllers;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
