@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.config;
+package uk.gov.hmcts.labs.rajivkapoor1.config;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

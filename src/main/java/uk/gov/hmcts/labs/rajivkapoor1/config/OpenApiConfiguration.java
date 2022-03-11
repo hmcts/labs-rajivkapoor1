@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.config;
+package uk.gov.hmcts.labs.rajivkapoor1.config;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
