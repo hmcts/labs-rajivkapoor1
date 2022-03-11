@@ -24,9 +24,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(SpringExtension.class)
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-// @ContextConfiguration(classes = SwaggerPublisherTest.class)
-// @SpringBootTest(classes = SwaggerConfiguration.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-// @SpringBootTest(classes = SwaggerConfiguration.class)
 
 @AutoConfigureMockMvc
 class SwaggerPublisherTest {
