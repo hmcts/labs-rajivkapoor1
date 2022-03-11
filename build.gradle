@@ -200,7 +200,7 @@ dependencies {
   smokeTestImplementation sourceSets.main.runtimeClasspath
 }
 
-mainClassName = 'uk.gov.hmcts.reform.Application'
+mainClassName = 'uk.gov.hmcts.labs.rajivkapoor1.Application'
 
 bootJar {
   getArchiveFileName().set(provider {
