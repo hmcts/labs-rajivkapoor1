@@ -22,9 +22,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * Each travis run on master should automatically save and upload (if updated) documentation.
  */
 @ExtendWith(SpringExtension.class)
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 
-@SpringBootTest(classes = SpringBootTest.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+// @ContextConfiguration(classes = SwaggerPublisherTest.class)
+// @SpringBootTest(classes = SwaggerConfiguration.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+// @SpringBootTest(classes = SwaggerConfiguration.class)
 
 @AutoConfigureMockMvc
 class SwaggerPublisherTest {
@@ -35,7 +37,7 @@ class SwaggerPublisherTest {
     @DisplayName("Generate swagger documentation")
     @Test
     void generateDocs() throws Exception {
-        byte[] specs = mvc.perform(get("/v2/api-docs"))
+        byte[] specs = mvc.perform(get("/v3/api-docs/"))
             .andExpect(status().isOk())
             .andReturn()
             .getResponse()

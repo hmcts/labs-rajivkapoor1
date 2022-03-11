@@ -1,4 +1,4 @@
-package uk.gov.hmcts.labs.rajivkapoor1;
+package uk.gov.hmcts.reform;
 
 import org.junit.jupiter.api.Test;
 
