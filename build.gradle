@@ -111,7 +111,7 @@ sonarqube {
     property "sonar.projectName", "HMCTS :: labs-rajivkapoor1"
     property "sonar.projectKey", "com.github.hmcts:labs-rajivkapoor1"
     property "sonar.coverage.jacoco.xmlReportPaths", "${jacocoTestReport.reports.xml.destination.path}"
-    property "sonar.exclusions", "**/config/**", "**/testing/**"
+    property "sonar.exclusions", ["**/config/**", "**/testing/**"]
   }
 }
 
