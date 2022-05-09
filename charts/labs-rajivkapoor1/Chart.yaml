@@ -3,10 +3,10 @@ appVersion: "1.0"
 description: A Helm chart for labs-rajivkapoor1 App
 name: labs-rajivkapoor1
 home: https://github.com/hmcts/labs-rajivkapoor1
-version: 0.0.1
+version: 0.0.2
 maintainers:
   - name: HMCTS labs team
 dependencies:
   - name: java
-    version: 3.7.3
+    version: 3.7.6
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
